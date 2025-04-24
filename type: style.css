@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TONE Trainer Mobile Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <h1>TONE Trainer</h1>
+    <p class="tagline">Tap a ritual to begin.</p>
+    <div class="button-grid">
+      <button onclick="trigger('Run Morning Ritual')">Morning Ritual</button>
+      <button onclick="trigger('Test Distraction Response')">Distraction Test</button>
+      <button onclick="trigger('Give me the Drop to Obey Flow')">Drop to Obey Flow</button>
+      <button onclick="trigger('Start Whisper Cadence Practice')">Whisper Cadence</button>
+    </div>
+    <div id="output"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+body {
+  font-family: sans-serif;
+  background-color: #000;
+  color: #ffd700;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+div.dashboard {
+  max-width: 500px;
+  margin: auto;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.tagline {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+button {
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+}
+#output {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  min-height: 50px;
+}
+function trigger(command) {
+  const output = document.getElementById("output");
+  switch (command) {
+    case "Run Morning Ritual":
+      output.innerText = "Morning Ritual Activated: Secret Vessel Creed + Eye Direction (Right → Left – Identity Lock)";
+      break;
+    case "Test Distraction Response":
+      output.innerText = "Testing Focus: Initiate Flirt Loop + NLP Redirect.";
+      break;
+    case "Give me the Drop to Obey Flow":
+      output.innerText = "Drop to Obey Flow
